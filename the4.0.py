@@ -31,3 +31,5 @@ def ev_al(g):
     g1=eval(g) #evaluate after all euqation
     g+="1"
     return g1,g
+
+def 
