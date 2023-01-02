@@ -36,9 +36,10 @@ def construct_forest(input):
     return
 
 #dic={"f":"['f','*',[3],ev_al('g')]","h":"['h','*',[3],[x]]","g":"['g','+',ev_al('h'),[3]]"}
-dic={"f":"['f','*',ev_al('g'),[x]]","h":"['h','*',[x],[100]]","g":"['g','+',[x],[20]]"}
-def ev_al(x):
-    w=dic["%s" %x]
+dic={"f":"['f','*',ev_al('g'),[x]]","h":"['h','*',[x],['100']]","g":"['g','+',[x],['20']]"}
+def ev_al(inp):
+    x='x'
+    w=dic["%s" %inp]
     result=eval(w)
     return(result)
 print(ev_al("f"))
