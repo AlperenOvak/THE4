@@ -43,3 +43,4 @@ def ev_al(inp):
     result=eval(w)
     return(result)
 print(ev_al("f"))
+
