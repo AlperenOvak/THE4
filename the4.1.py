@@ -62,7 +62,17 @@ def construct_forest(input): #main func
       "s(x)=x^21",
       "a(x)=d(x)+s(x)",
       "z(x)=o(x)^a(x)"]"""
-#print(construct_forest(Defs))
+Defs=["h(x) = f(x) + p(x)", 
+      " g (x)= 10  *x ", 
+      "f ( x ) =g( x)+30",
+      "o(x ) = 20 + q(x)   ", 
+      "n (x)   =h(x)- g (x) ",
+      "p(x) = 21^x",
+      "s(x) = 100+x", 
+      "v(x) = q(x) + 8",
+      " q( x)=30 -x", 
+      "w(x)=v(x)*40"]
+print(construct_forest(Defs))
 
     
 
