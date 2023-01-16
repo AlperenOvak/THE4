@@ -1,6 +1,6 @@
 def remove_spaces(x):#take the str format of first input and remove all spaces
     return eval(x.replace(" ", ""))
-def spliter(function,subtree): #split the function item, retrun separately
+def spliter(function,subtree): #split the function item, return separately
     name=function[0] 
     function=function.split("=")[1] 
     ops=["+","-","*","^"]
@@ -8,13 +8,13 @@ def spliter(function,subtree): #split the function item, retrun separately
         if i in function: #detect the operator after the "=" sign
             oper=i
             vars=function.split(i)
-            if vars[0][0] not in "1234567890x": #recognize whether the first variable is function. 
+            if vars[0][0] not in "1234567890x": #recognize whether the first variable is math function. 
                 subtree.append(vars[0][0])      #if so, save its name since final output do not include these subtrees.
             if vars[1][0] not in "1234567890x": # same process for the second variable
                 subtree.append(vars[1][0])
             var1,var2=[vars[0]],[vars[1]]
     return [name,oper,var1,var2]
-def creative(input):  #create a dictionary to know which item is which func.
+def creative(input):  #create a dictionary to know which item is which math func.
     nospace=remove_spaces(str(input))
     forest={}
     subtree=[]
@@ -39,7 +39,7 @@ def construct_forest(input): #main func
     forest,subtree=creative(input)
     result=[]
     for i in forest:
-        if i not in subtree: #chack whether this function is undesirable or not
+        if i not in subtree: #chack whether this math function is undesirable or not
             recursive(i,forest) #if so, evaluate them 
             result.append(forest[i]) #and append into the result 
     return(result)
