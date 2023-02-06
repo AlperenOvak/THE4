@@ -13,12 +13,9 @@ a fixed variable ‘x’. Function definitions will conform to the following rul
 <constant> ==> ’1’ | ’2’ | .. | ’100’
 <operator> ==> ’+’ | ’-’ | ’*’ | ’^’
 
-#Sample Run:
+# Sample Run:
 
->>> Defs = ["g(x   ) = x + 20", "h(x) = x * 100", "f(x) = g(x) * x"]
->>> Forest = construct_forest(Defs)
->>> print(Forest)
-[[’f’, ’*’, [’g’, ’+’, [’x’], [’20’]], [’x’]], [’h’, ’*’, [’x’], [’100’]]]
+![image](https://user-images.githubusercontent.com/96688864/217093079-8dff992d-403d-49c3-bbd1-c4bbcd4c3d24.png)
 
 ## We are not allowed to:
 – import any libraries
